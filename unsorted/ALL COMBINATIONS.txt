@@ -1,0 +1,3 @@
+http://stackoverflow.com/a/127856
+
+Not all 15 puzzle instances are solvable

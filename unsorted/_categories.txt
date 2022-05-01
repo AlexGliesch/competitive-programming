@@ -1,0 +1,83 @@
+### Difficulties:
+very easy
+easy
+medium
+hard
+very hard
+
+### TAGS: 
+* adhoc
+* algds (algorithms and data structures)
+* bubblesort
+* ssearch (state space search)
+* bfs
+* geometry
+* dijkstra
+* maxflow
+* mincostmaxflow
+* matching
+* fenwicktree
+* segmenttree
+* binarysearch
+* primes
+* sqrtdecomposition
+* convexhull
+* dfs
+* tsp (travelling salesman problem)
+* mst (minimum spanning tree)
+* lca (least common ancestor)
+* math
+* dp
+* dag
+
+### Strucutre: 
+[(?)] Problem -- difficulty -- tags [-- comments]
+(?) means I haven't implemented  the solution
+
+### Problems:
+Inverting huffman -- very hard -- dp, math
+Go up the ultras -- hard -- segmenttree
+Football -- easy -- adhoc
+Disjoint water supply -- hard -- dag, dp
+Counting ones -- easy -- math
+Attacking rooks -- medium -- maxflow, matching
+Concurso de Contos -- easy -- adhoc
+Coral Perfeito -- easy -- adhoc
+Grid de Largada -- easy -- algds, bubblesort
+Linhas de Conteiners -- medium -- adhoc, bubblesort -- Just need to count number of swaps in first row and first column
+Maquina Dobradora -- medium -- dp
+Triangulos -- medium -- May use bitmask to mark possible triangle position. Only need to iterate over first 1/3 points
+(?) Corte -- hard -- dp, geometry -- I think the solution involves a 2D DP, where a state represents a cut; we then only consider one half of the cut
+Letras -- easy -- ssearch, bfs 
+Pizza do Vo Pepe -- easy -- ad hoc -- similar to "Triangulos"
+Confederacao -- medium -- use map to store, for each planet, a bitmask of all planes it is to the left (or right) of
+No Ones Labyrinth/O Labirinto de Ninguem -- medium -- ssearch, bfs
+Sera Que Indiana Jones Chega La -- medium -- geometry, dijkstra, ssearch
+Zak Galou -- hard -- dp, dijkstra -- For each room, compute minimum necessary mana with DP (like knapsack problem)
+Internet Bandwidth -- easy -- maxflow -- Just run the max flow
+Angry Programmer -- easy -- maxflow
+Back to the Future -- easy -- mincostmaxflow
+(?) Monkeys in the Emei Mountain -- medium -- maxflow -- Each vertex is a time intervals, not a specific time (otherwise # of vertices would be 50k), so we must first shrink the time intervals
+Hurry Up/Apresse-se -- medium - matching
+(?) Potentiometers -- easy -- fenwicktree
+Frequent Values -- easy -- segmenttree -- Something with counting frequencies, iterating manually when frequencies are the same
+Reverse Prime -- hard -- fenwicktree, primes, binarysearch -- Find all primes up to 10^6. After removing, use binary search on fenwick tree sums to find which index has a specific frequency.
+Great Wall of China -- easy -- maxflow
+Antenna Placement -- medium -- bipartite matching -- Result is number of stars - 2*matching (antennas without pair) + matching (antennas with pair)
+K-query II -- medium -- sqrtdecomposition -- Greater than k in range
+Consultas Horríveis/Horrible Queries -- easy -- fenwicktree -- Range update
+New Computers -- easy -- convexhull
+Camadas de Cebola/Onion Layers -- easy -- convexhull -- Repeatedly run CH. Remove duplicate points on the same line.
+(?) Homem, Elefante e Rato -- hard -- fenwicktree -- Instead of using the Fenwick Tree for addition, swap a node's men, elephant and rats
+(?) Hot Potato -- hard -- sqrtdecomposition, dfs -- Range median query, by testing how many elements are greater than k in a range. Find k (the number the teacher will choose) by binary search.
+(?) Diagrama de Venn? -- medium -- geometry -- I think the solution involves intersecting two convex polygons, not hard
+(?) Independent Attacking Zones -- hard -- dp -- 2D DP: find all feasible triangles between points i and j (starts at 0 and n-1). The new triangle ALWAYS has a vertex on point i. Notice that when you draw a triangle over 3 points abc, with a=i, they will split (i, j) in 3 segments (called recursively in DP): ab, bc, cj.
+(?) Knight Tour -- hard -- bfs, ssearch, dp, tsp -- The TSP part is easy: just run the straightforward DP. But doing the moves manually (with BFS) will result in time limit: must pre-compute some distances; note the board is a repeating pattern. My idea: use perimeter search with depth=~10
+Crimewave -- medium -- maxflow -- To add vertex capacities, split a vertex in two
+(?) Caminhao -- hard -- mst, lca -- Two solutions: 1. run MST with any algorithm and answer queries with LCA, 2. tag baloon source and sinks and run Kruskal; when source and sink's groups connect (with union), save that edge distance.
+Ants Colony -- easy -- lca -- Direct application of LCA
+Free Parentheses -- medium -- dp
+(?) Against Mammoths -- hard -- matching, binarysearch -- Binary search the answer, performing a max bip. matching every time. Edges appear in the graph if it's possible to kill an alien with a certain human, and within the feasible time (argument of the binary search). If a perfect matching does not exist for infinite time, it's not possible.
+Bridge Building -- medium -- dp
+ACORN -- easy -- dp
+(?) Sharing Chocolate -- hard -- dp -- My idea: 3D DP on the size of the bar (m x n) and a 16-bitmask saying which pieces can be formed. Or maybe even a 2D DP that stores that bitmask?

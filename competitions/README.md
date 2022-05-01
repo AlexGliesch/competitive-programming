@@ -1,0 +1,1 @@
+Solutions to problems from various programming competitions, from when I was practicing for the ICPC.
