@@ -1,5 +1,5 @@
-mod subsets_ii;
+mod remove_all_adjacent_duplicates_in_string_ii;
 
 fn main() {
-  subsets_ii::main();
+  remove_all_adjacent_duplicates_in_string_ii::main();
 }
