@@ -1,5 +1,5 @@
-mod remove_all_adjacent_duplicates_in_string_ii;
+mod sentence_screen_fitting;
 
 fn main() {
-  remove_all_adjacent_duplicates_in_string_ii::main();
+  sentence_screen_fitting::main();
 }
