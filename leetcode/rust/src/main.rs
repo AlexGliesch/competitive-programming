@@ -1,5 +1,5 @@
-mod sentence_screen_fitting;
+mod longest_valid_parentheses;
 
 fn main() {
-  sentence_screen_fitting::main();
+  longest_valid_parentheses::main();
 }
