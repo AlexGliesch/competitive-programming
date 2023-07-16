@@ -1,5 +1,5 @@
-mod longest_valid_parentheses;
+mod remove_stones_to_minimize_the_total;
 
 fn main() {
-  longest_valid_parentheses::main();
+  remove_stones_to_minimize_the_total::main();
 }
